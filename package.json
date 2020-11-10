@@ -12,6 +12,7 @@
     "@n8tb1t/use-scroll-position": "^2.0.3",
     "@react-hook/window-size": "^3.0.7",
     "@styled-icons/entypo-social": "^10.18.0",
+    "@styled-icons/simple-icons": "^10.22.0",
     "@types/styled-components": "^5.1.4",
     "@types/styled-jsx": "^2.2.8",
     "@types/yup": "^0.29.9",

@@ -1,20 +1,18 @@
 import { TTypographySize } from "@declarations/styled";
 import { DefaultTheme } from "styled-components";
-const materialDesignScale: any = {
-	xxs: 9.22,
-	xs: 9.22,
-	s: 11.52,
-	m: 14.4,
-	base: 18,
-	l: 22.5,
-	xl: 28.13,
-	xxl: 28,
-	d1: 20,
-	d2: 24,
-	d3: 34,
-	d4: 48,
-	d5: 60,
-	d6: 96,
+const majorThird: any = {
+	xs: 8.19,
+	s: 10.24,
+	m: 12.8,
+	base: 16,
+	l: 20,
+	xl: 25,
+	d6: 31.25,
+	d5: 39.06,
+	d4: 48.83,
+	d3: 61.04,
+	d2: 76.25,
+	d1: 95.37,
 };
 const multipliers: any = {
 	base: 1, //Base font size multiplier
@@ -30,12 +28,13 @@ const getSize = (
 	value: string,
 	mod: "base" | "m" | "s" = "base",
 	lineHeightMod: "base" | "lhb" | "lhd" = "base",
-	fontSizes: any = materialDesignScale,
+	fontSizes: any = majorThird,
 	mult: any = multipliers
 ) => {
 	const measure = lineHeightMod === "base" ? "em" : "rem";
 	const respMultiplier = mult[mod];
 	const lhMultiplier = mult[lineHeightMod];
+
 	return (fontSizes[value] / 16) * respMultiplier * lhMultiplier + measure;
 };
 
@@ -64,10 +63,8 @@ const theme: DefaultTheme = {
 		},
 	},
 	fontFamily: {
-		body: `"Open Sans",Meiryo,"Hiragino Kaku Gothic ProN","MS PGothic",sans-serif `,
-		display: `"Roboto",Meiryo,"Hiragino Kaku Gothic ProN","MS PGothic",sans-serif`,
-		// body: "Open Sans",
-		// display: "Roboto",
+		body: `"Raleway"`,
+		display: `"Cabin"`,
 	},
 	palette: {
 		primary: "#fff",
@@ -92,14 +89,12 @@ const theme: DefaultTheme = {
 	},
 
 	typography: {
-		xxs: getSize("xxs"),
 		xs: getSize("xs"),
 		s: getSize("s"),
 		m: getSize("m"),
 		base: getSize("base"),
 		l: getSize("l"),
 		xl: getSize("xl"),
-		xxl: getSize("xxl"),
 		d1S: getSize("d1", "s"),
 		d1M: getSize("d1", "m"),
 		d1: getSize("d1"),
@@ -120,14 +115,12 @@ const theme: DefaultTheme = {
 		d6: getSize("d6"),
 	},
 	lineHeight: {
-		xxs: getSize("xxs", "base", "lhb"),
 		xs: getSize("xs", "base", "lhb"),
 		s: getSize("s", "base", "lhb"),
 		m: getSize("m", "base", "lhb"),
 		base: getSize("base", "base", "lhb"),
 		l: getSize("l", "base", "lhb"),
 		xl: getSize("xl", "base", "lhb"),
-		xxl: getSize("xxl", "base", "lhb"),
 		d1S: getSize("d1", "s", "lhd"),
 		d1M: getSize("d1", "m", "lhd"),
 		d1: getSize("d1", "base", "lhd"),
@@ -178,8 +171,11 @@ const theme: DefaultTheme = {
 		normal: ".3s",
 		fast: ".2s",
 	},
-	screenMaxWidth: "77.5em",
-	screenMaxWidthWide: "85em",
+	paragraphMaxWidth: "37.5rem",
+	projectCardMaxWidth: "45rem",
+	container: {
+		padding: "4vw",
+	},
 };
 
 export default theme;

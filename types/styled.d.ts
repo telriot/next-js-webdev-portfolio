@@ -1,14 +1,12 @@
 import "styled-components";
 export type TSize = "xs" | "sm" | "md" | "lg" | "xl";
 type TTypographySize =
-	| "xxs"
 	| "xs"
 	| "s"
 	| "m"
 	| "base"
 	| "l"
 	| "xl"
-	| "xxl"
 	| "d1S"
 	| "d1M"
 	| "d1"
@@ -36,14 +34,12 @@ type TPaletteText = {
 };
 
 type TTypography = {
-	xxs: string;
 	xs: string;
 	s: string;
 	m: string;
 	base: string;
 	l: string;
 	xl: string;
-	xxl: string;
 	d1S: string;
 	d1M: string;
 	d1: string;
@@ -115,7 +111,10 @@ declare module "styled-components" {
 		//shadows: TShadows;
 		letterSpacing: { tight: string };
 		transition: TSpeed;
-		screenMaxWidth: string;
-		screenMaxWidthWide: string;
+		paragraphMaxWidth: string;
+		projectCardMaxWidth: string;
+		container: {
+			padding: string;
+		};
 	}
 }

@@ -1,0 +1,12 @@
+import styled from "styled-components";
+
+export const MainContainer = styled.div`
+	grid-column: main-start/main-end;
+	//background: rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
+	margin-top: 0.5em;
+	width: 100%;
+`;
+
+export default MainContainer;
