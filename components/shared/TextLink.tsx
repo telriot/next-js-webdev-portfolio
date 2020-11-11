@@ -14,6 +14,7 @@ const StyledLink = styled.a`
 	transition: color 0.3s;
 	cursor: pointer;
 
+	&:hover,
 	&:focus {
 		outline: none;
 		color: ${({ theme }) => theme.palette.secondary};
