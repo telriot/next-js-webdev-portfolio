@@ -51,7 +51,7 @@ const theme: DefaultTheme = {
 		values: {
 			xs: "28.75em",
 			sm: "37.5em",
-			md: "52.25em",
+			md: "57.5em",
 			lg: "64em",
 			xl: "88em",
 		},
@@ -69,7 +69,7 @@ const theme: DefaultTheme = {
 	palette: {
 		primary: "#fff",
 		hover: "#f8f8f8",
-		secondary: "#FFC805",
+		secondary: "#ff006e",
 		hoverSecondary: "#f2b200",
 		secondaryLight: "#ffd542",
 		tertiary: "#111",
@@ -83,8 +83,8 @@ const theme: DefaultTheme = {
 		text: {
 			primary: "#222",
 			secondary: "#f3f3f3",
-			tertiary: "#FFC805",
-			extra: "#4F4F4F",
+			tertiary: "#4F4F4F",
+			extra: "#FFC805",
 		},
 	},
 
@@ -172,7 +172,7 @@ const theme: DefaultTheme = {
 		fast: ".2s",
 	},
 	paragraphMaxWidth: "37.5rem",
-	projectCardMaxWidth: "45rem",
+	projectCardMaxWidth: "43.25rem",
 	container: {
 		padding: "4vw",
 	},

@@ -11,6 +11,13 @@ export const contactData = {
 	addressLine3: "Miyazaki, Japan",
 	addressLine3JP: "宮崎市",
 };
+export const footerLinks = {
+	index: { text: "to my projects", href: "/projects" },
+	projects: { text: "to my tech stack", href: "/tech" },
+	notes: { text: "back home", href: "/" },
+	tech: { text: "browse my notes", href: "/notes" },
+};
+
 export const projects = [
 	{
 		name: "Girolamo La Sfrocchia",

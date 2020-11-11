@@ -32,6 +32,9 @@ const Container = styled.div`
 	${({ theme }) => theme.breakpoints.down("md")} {
 		max-width: 10em;
 	}
+	${({ theme }) => theme.breakpoints.down("xs")} {
+		margin: ${({ theme }) => theme.margin("d6S").bottom + " 0 0.25em"};
+	}
 `;
 const StyledNav = styled.nav`
 	display: flex;
@@ -67,7 +70,7 @@ function SocialNav({ invert }: { invert?: boolean }) {
 			<Container>
 				<StyledNav>
 					{links.map(({ href, label, icon }) => (
-						<IconButton href={href} label={label} icon={icon} />
+						<IconButton href={href} label={label} icon={icon} key={label} />
 					))}
 				</StyledNav>
 			</Container>

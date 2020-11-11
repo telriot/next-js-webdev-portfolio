@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
+import theme from "@styles/theme";
 
 interface IIconButton {
 	href: string;
@@ -15,15 +16,23 @@ const HiddenSpan = styled.span`
 	white-space: nowrap;
 	width: 1px;
 `;
+const StyledA = styled.a`
+	&:focus {
+		outline: none;
+		& > * {
+			color: ${({ theme }) => theme.palette.secondary};
+		}
+	}
+`;
 
 function SocialNav({ href, icon, label }: IIconButton) {
 	return (
 		<>
-			<Link href={href} key={href}>
-				<a target="_blank" rel="noreferrer">
+			<Link href={href} key={href} passHref>
+				<StyledA tabIndex={0} target="_blank" rel="noreferrer">
 					{icon}
 					<HiddenSpan>{label}</HiddenSpan>
-				</a>
+				</StyledA>
 			</Link>
 		</>
 	);

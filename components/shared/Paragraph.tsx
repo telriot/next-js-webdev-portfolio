@@ -43,7 +43,7 @@ const StyledParagraph = styled.p<IParagraph>`
 		text-indent: 1em;
 	}
 
-	${({ theme }) => theme.breakpoints.down("md")} {
+	${({ theme }) => theme.breakpoints.down("sm")} {
 		font-size: ${({ theme, small, large }) =>
 			small
 				? theme.typography.s

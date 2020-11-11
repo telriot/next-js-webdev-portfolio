@@ -1,19 +1,19 @@
 import { HTMLAttributes } from "react";
 import styled from "styled-components";
 
-interface ISubheading extends HTMLAttributes<HTMLSpanElement> {
+interface ISubheading extends HTMLAttributes<HTMLDivElement> {
 	color?: string;
 	noMargins?: boolean;
 }
 
-const Subheading = styled.h6<ISubheading>`
+const Subheading = styled.div<ISubheading>`
 	font-family: ${({ theme }) => theme.fontFamily.display};
 	font-size: ${({ theme }) => theme.typography.xl};
 	line-height: ${({ theme }) => theme.lineHeight.xl};
 	color: ${({ theme, color }) =>
 		color === "secondary"
 			? theme.palette.text.secondary
-			: theme.palette.text.primary};
+			: theme.palette.text.tertiary};
 	text-align: left;
 	font-weight: 400;
 	margin-bottom: ${({ theme, noMargins }) =>

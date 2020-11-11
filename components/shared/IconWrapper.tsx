@@ -11,16 +11,17 @@ const IconWrapper = styled.div<IIconWrapper>`
 		height: ${({ size }) => (size ? size : "2.75em")};
 		width: ${({ size }) => (size ? size : "2.75em")};
 		transition: color 0.3s;
+		outline: none;
 		cursor: pointer;
 		color: ${({ invert, theme }) =>
 			invert ? theme.palette.text.secondary : theme.palette.text.primary};
-		&:hover {
-			color: ${({ invert, theme }) =>
-				invert ? theme.palette.secondary : "#111"};
+		&:hover,
+		&:focus {
+			color: ${({ theme }) => theme.palette.secondary};
 		}
 		${({ theme }) => theme.breakpoints.down("md")} {
-			height: 2.5em;
-			width: 2.5em;
+			height: ${({ size }) => (size ? "calc(" + size + "*.75)" : "2.25em")};
+			width: ${({ size }) => (size ? "calc(" + size + "*.75)" : "2.25em")};
 		}
 	}
 `;

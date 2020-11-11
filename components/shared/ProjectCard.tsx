@@ -20,10 +20,7 @@ const TechSpan = styled.p`
 	font-family: ${({ theme }) => theme.fontFamily.display};
 	font-size: ${({ theme }) => theme.typography.m};
 	line-height: ${({ theme }) => theme.lineHeight.m};
-	color: ${({ theme, color }) =>
-		color === "secondary"
-			? theme.palette.text.secondary
-			: theme.palette.text.primary};
+	color: ${({ theme }) => theme.palette.text.tertiary};
 	text-align: left;
 	font-weight: 400;
 	margin-bottom: ${({ theme }) => "calc(" + theme.margin("m").bottom + "*4)"};

@@ -30,10 +30,10 @@ const StyledH1 = styled.h1<IHeading>`
 			noMargin ? 0 : theme.margin("d1M").bottom};
 	}
 	${({ theme }) => theme.breakpoints.down("xs")} {
-		font-size: ${({ theme }) => theme.typography.d1S};
-		line-height: ${({ theme }) => theme.lineHeight.d1S};
+		font-size: ${({ theme }) => theme.typography.d2S};
+		line-height: ${({ theme }) => theme.lineHeight.d2S};
 		margin-bottom: ${({ theme, noMargin }) =>
-			noMargin ? 0 : theme.margin("d1S").bottom};
+			noMargin ? 0 : theme.margin("d2S").bottom};
 	}
 `;
 

@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import Avatar from "@components/shared/Avatar";
 import Navbar from "@components/shared/Navbar";
@@ -16,6 +15,9 @@ const Wrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	${({ theme }) => theme.breakpoints.down("md")} {
+		display: none;
+	}
 `;
 function Sidebar() {
 	return (
