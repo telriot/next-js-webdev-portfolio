@@ -32,6 +32,10 @@ export default class MyDocument extends Document {
 			<Html>
 				<Head>
 					<html lang="en" />
+					<meta
+						name="description"
+						content="Beniamino Tartarini, freelance web developer from Italy working on Typescript and the MERN stack. "
+					/>
 					<link href="/fonts/styles.css" rel="stylesheet" />
 				</Head>
 				<body>
