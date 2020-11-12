@@ -63,9 +63,17 @@ const ImageWrapper = styled.div`
 			opacity: 1;
 		}
 	}
+	${({ theme }) => theme.breakpoints.down("sm")} {
+		width: 100%;
+		min-width: 100%;
+		margin-bottom: ${({ theme }) => theme.margin("base").top};
+	}
 `;
 const MainDiv = styled.div`
 	display: flex;
+	${({ theme }) => theme.breakpoints.down("sm")} {
+		flex-direction: column;
+	}
 `;
 const StyledIconWrapper = styled(IconWrapper)`
 	margin: 0.25em;

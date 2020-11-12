@@ -45,25 +45,15 @@ const StyledParagraph = styled.p<IParagraph>`
 
 	${({ theme }) => theme.breakpoints.down("sm")} {
 		font-size: ${({ theme, small, large }) =>
-			small
-				? theme.typography.s
-				: large
-				? theme.typography.base
-				: theme.typography.m};
+			small ? theme.typography.s : theme.typography.base};
 		line-height: ${({ theme, small, large }) =>
-			small
-				? theme.lineHeight.s
-				: large
-				? theme.lineHeight.base
-				: theme.lineHeight.m};
+			small ? theme.lineHeight.s : theme.lineHeight.base};
 		margin-bottom: ${({ theme, noMargin, small, large }) =>
 			noMargin
 				? 0
 				: small
 				? theme.margin("s").bottom
-				: large
-				? theme.margin("base").bottom
-				: theme.margin("m").bottom};
+				: theme.margin("base").bottom};
 	}
 `;
 
