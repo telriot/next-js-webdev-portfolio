@@ -61,7 +61,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 				{fontTheme}
 			</style>
 			<Head>
-				<title>Next-TS-Styled Boilerplate</title>
+				<title>Beniamino Tartarini</title>
 			</Head>
 			<GlobalStyle />
 			<LayoutProvider>
