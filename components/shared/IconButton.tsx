@@ -7,6 +7,7 @@ interface IIconButton {
 	href: string;
 	icon: React.ReactFragment;
 	label: string;
+	noLink?: boolean;
 }
 const HiddenSpan = styled.span`
 	clip: rect(1px, 1px, 1px, 1px);
@@ -25,8 +26,13 @@ const StyledA = styled.a`
 	}
 `;
 
-function SocialNav({ href, icon, label }: IIconButton) {
-	return (
+function SocialNav({ href, icon, label, noLink }: IIconButton) {
+	return noLink ? (
+		<StyledA href={href} key={href} tabIndex={0}>
+			{icon}
+			<HiddenSpan>{label}</HiddenSpan>
+		</StyledA>
+	) : (
 		<>
 			<Link href={href} key={href} passHref>
 				<StyledA tabIndex={0} target="_blank" rel="noreferrer">

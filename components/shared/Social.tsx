@@ -60,7 +60,7 @@ const links = [
 	{
 		icon: <Gmail />,
 		label: "Gmail",
-		href: `mailto ${contactData.email}`,
+		href: `mailto:${contactData.email}`,
 	},
 ];
 
@@ -70,7 +70,13 @@ function SocialNav({ invert }: { invert?: boolean }) {
 			<Container>
 				<StyledNav>
 					{links.map(({ href, label, icon }) => (
-						<IconButton href={href} label={label} icon={icon} key={label} />
+						<IconButton
+							href={href}
+							label={label}
+							icon={icon}
+							key={label}
+							noLink={label === "Gmail" ? true : false}
+						/>
 					))}
 				</StyledNav>
 			</Container>
