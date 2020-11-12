@@ -34,7 +34,7 @@ export const projects = [
 	{
 		name: "RRT Event Board",
 		description: [
-			"A CRUD Event Board built with React/Redux-Toolkit on Node JS",
+			"A CRUD Event Board built with React/Redux-Toolkit on Node JS and prototyped with Material UI. It features mail notifications via Snapgrid and a simple session based authentication.",
 		],
 		tools:
 			"Typescript, Javascript, React, Redux-Toolkit, Material-UI NodeJS, Express, Snapgrid API",
@@ -46,9 +46,10 @@ export const projects = [
 	{
 		name: "MTG EDH Life Counter",
 		description: [
-			"A Web Socket based life counter for Magic: The Gathering players trying to beat the pandemic",
+			"A life counter app for Magic: The Gathering players trying to beat the pandemic. Built on Typescript leveraging Socket.IO for real-time data refreshing.",
 		],
-		tools: "Typescript, React, Styled Components, NodeJS, Express, Socket.IO",
+		tools:
+			"Typescript, React, Context API, Styled Components, NodeJS, Socket.IO",
 		web: "https://counterino.herokuapp.com/",
 		git: "https://github.com/telriot/mtg-life-counter",
 		webp: "/assets/projects/LifeCounter-md.webp",
@@ -57,9 +58,9 @@ export const projects = [
 	{
 		name: "Crypto Wall",
 		description: [
-			"A cryptocurrency visualization tool based on the CoinGecko API and WebSockets",
+			"A cryptocurrency visualization tool based on the CoinGecko API. Users can share data sets in real-time via Web Sockets.",
 		],
-		tools: "React, NodeJs, MaterialUI, JavaScript, HTML",
+		tools: "React, NodeJs, MaterialUI, JavaScript, MongoDB, Socket.IO, RTL",
 		web: "https://cryptowall.herokuapp.com/",
 		git: "https://github.com/telriot/chat-app",
 		webp: "/assets/projects/cryptowall-md.webp",
@@ -68,7 +69,7 @@ export const projects = [
 	{
 		name: "Book Club",
 		description: [
-			"A book trading platform for avid readers based on the Google Books API",
+			"A book trading platform for avid readers based on the Google Books API, styled with Sass Modules.",
 		],
 		tools: "React, NodeJs. MongoDB, JavaScript, Sass, HTML",
 		web: "https://bookclubfcc.herokuapp.com/",
@@ -79,7 +80,7 @@ export const projects = [
 	{
 		name: "Kogetaro",
 		description: [
-			"A nostalgic, random generated, dungeon-crawler game rendered via React and managed through the Context API",
+			"A nostalgic, random generated, dungeon-crawler game rendered via React and managed through the Context API. Find and defeat the king of cats!",
 		],
 		tools: "React, JavaScript, Sass, HTML",
 		web: "https://obscure-falls-32133.herokuapp.com/",
