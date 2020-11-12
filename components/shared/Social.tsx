@@ -48,13 +48,13 @@ const links = [
 	{
 		icon: <Github />,
 		label: "Github",
-		href: "https://www.facebook.com/serenaalessandraaltavilla/",
+		href: "https://github.com/telriot",
 	},
 
 	{
 		icon: <Codewars />,
 		label: "Codewars",
-		href: "https://www.linkedin.com",
+		href: "https://www.codewars.com/users/telriot",
 	},
 
 	{
