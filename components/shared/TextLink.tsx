@@ -40,7 +40,7 @@ export const LinkContainer = styled.div<ILinkContainer>`
 
 function TextLink({ href, text }: { href: string; text: string }) {
 	return (
-		<Link href={href} passHref>
+		<Link href={href}>
 			<StyledLink>{text}</StyledLink>
 		</Link>
 	);
