@@ -1,7 +1,6 @@
 import Layout from "@components/layout/Layout";
 import MainContainer from "@components/layout/MainContainer";
 import Heading from "@components/shared/Heading";
-import Paragraph from "@components/shared/Paragraph";
 import ProjectCard from "@components/shared/ProjectCard";
 import { useContext } from "react";
 import { ThemeContext } from "styled-components";

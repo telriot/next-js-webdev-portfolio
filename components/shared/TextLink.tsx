@@ -1,11 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
-import { useRouter } from "next/router";
 interface ILinkContainer {
 	maxWidth?: string;
 }
-const StyledLink = styled.span`
+const StyledLink = styled.a`
 	font-family: ${({ theme }) => theme.fontFamily.display};
 	font-size: ${({ theme }) => theme.typography.xl};
 	color: ${({ theme }) => theme.palette.text.primary};
@@ -40,12 +39,10 @@ export const LinkContainer = styled.div<ILinkContainer>`
 `;
 
 function TextLink({ to, text }: { to: string; text: string }) {
-	const router = useRouter();
-	const handleClick = () => router.push(to);
 	return (
-		<StyledLink onClick={handleClick} tabIndex={0}>
-			{text}
-		</StyledLink>
+		<Link href={to} passHref>
+			<StyledLink tabIndex={0}>{text}</StyledLink>
+		</Link>
 	);
 }
 
