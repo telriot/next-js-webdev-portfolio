@@ -39,7 +39,7 @@ function Footer() {
 				<Copyright />
 			</div>
 			<TextLink
-				href={`/${footerLinks[linkFromRouter].href}`}
+				to={`/${footerLinks[linkFromRouter].href}`}
 				text={footerLinks[linkFromRouter].text}
 			/>
 		</Wrapper>

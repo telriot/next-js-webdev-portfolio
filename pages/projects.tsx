@@ -25,7 +25,7 @@ function Projects() {
 				<LinkContainer maxWidth={theme.projectCardMaxWidth}>
 					<TextLink
 						text={footerLinks.projects.text}
-						href={footerLinks.projects.href}
+						to={footerLinks.projects.href}
 					/>
 				</LinkContainer>
 			</MainContainer>

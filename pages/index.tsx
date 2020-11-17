@@ -85,10 +85,7 @@ function Index({
 					want to get in touch for work, ideas, or anything code&nbsp;related.
 				</Paragraph>
 				<LinkContainer>
-					<TextLink
-						text={footerLinks.index.text}
-						href={footerLinks.index.href}
-					/>
+					<TextLink text={footerLinks.index.text} to={footerLinks.index.href} />
 				</LinkContainer>
 			</MainContainer>
 		</Layout>

@@ -39,9 +39,9 @@ export const LinkContainer = styled.div<ILinkContainer>`
 	}
 `;
 
-function TextLink({ href, text }: { href: string; text: string }) {
+function TextLink({ to, text }: { to: string; text: string }) {
 	const router = useRouter();
-	const handleClick = () => router.push(href);
+	const handleClick = () => router.push(to);
 	return (
 		<StyledLink onClick={handleClick} tabIndex={0}>
 			{text}

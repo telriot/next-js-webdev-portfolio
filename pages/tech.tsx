@@ -71,7 +71,7 @@ function tech() {
 				))}
 
 				<LinkContainer>
-					<TextLink text={footerLinks.tech.text} href={footerLinks.tech.href} />
+					<TextLink text={footerLinks.tech.text} to={footerLinks.tech.href} />
 				</LinkContainer>
 			</MainContainer>
 		</Layout>

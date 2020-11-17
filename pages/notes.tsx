@@ -34,10 +34,7 @@ function Notes() {
 					<EmptyEntries />
 				)}
 				<LinkContainer maxWidth={theme.projectCardMaxWidth}>
-					<TextLink
-						text={footerLinks.notes.text}
-						href={footerLinks.notes.href}
-					/>
+					<TextLink text={footerLinks.notes.text} to={footerLinks.notes.href} />
 				</LinkContainer>
 			</MainContainer>
 		</Layout>
