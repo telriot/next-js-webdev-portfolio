@@ -4,7 +4,7 @@ import Link from "next/link";
 interface ILinkContainer {
 	maxWidth?: string;
 }
-const StyledLink = styled.a`
+const StyledLink = styled.span`
 	font-family: ${({ theme }) => theme.fontFamily.display};
 	font-size: ${({ theme }) => theme.typography.xl};
 	color: ${({ theme }) => theme.palette.text.primary};
@@ -41,7 +41,7 @@ export const LinkContainer = styled.div<ILinkContainer>`
 function TextLink({ href, text }: { href: string; text: string }) {
 	return (
 		<Link href={href}>
-			<StyledLink>{text}</StyledLink>
+			<StyledLink tabIndex={0}>{text}</StyledLink>
 		</Link>
 	);
 }
