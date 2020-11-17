@@ -5,9 +5,9 @@ import Heading from "@components/shared/Heading";
 import Paragraph from "@components/shared/Paragraph";
 import { useContext } from "react";
 import { ThemeContext } from "styled-components";
-import Subheading, { SubWithMargin } from "@components/shared/Subheading";
+import { SubWithMargin } from "@components/shared/Subheading";
 import TextLink, { LinkContainer } from "@components/shared/TextLink";
-import { projects, footerLinks } from "@public/config";
+import { footerLinks } from "@public/config";
 const EmptyEntries = () => {
 	return (
 		<>
@@ -34,7 +34,10 @@ function Notes() {
 					<EmptyEntries />
 				)}
 				<LinkContainer maxWidth={theme.projectCardMaxWidth}>
-					<TextLink text={footerLinks.projects.text} href="/projects" />
+					<TextLink
+						text={footerLinks.notes.text}
+						href={footerLinks.notes.href}
+					/>
 				</LinkContainer>
 			</MainContainer>
 		</Layout>

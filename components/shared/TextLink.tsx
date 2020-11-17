@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
+import { useRouter } from "next/router";
 interface ILinkContainer {
 	maxWidth?: string;
 }
@@ -39,10 +40,12 @@ export const LinkContainer = styled.div<ILinkContainer>`
 `;
 
 function TextLink({ href, text }: { href: string; text: string }) {
+	const router = useRouter();
+	const handleClick = () => router.push(href);
 	return (
-		<Link href={href}>
-			<StyledLink tabIndex={0}>{text}</StyledLink>
-		</Link>
+		<StyledLink onClick={handleClick} tabIndex={0}>
+			{text}
+		</StyledLink>
 	);
 }
 
