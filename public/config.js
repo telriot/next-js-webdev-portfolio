@@ -20,6 +20,18 @@ export const footerLinks = {
 
 export const projects = [
 	{
+		name: "Serena Altavilla",
+		description: [
+			"A presentational webpage for Serena Altavilla, Italian singer and songwriter",
+			"An essential, super-responsive layout to showcase Serena's work"
+		],
+		tools: "Typescript, NEXT.js, Styled Components",
+		web: "https://www.serena-altavilla.com/",
+		git: "",
+		webp: "/assets/projects/serena-altavilla.webp",
+		jpg: "/assets/projects/serena-altavilla.jpg",
+	},
+	{
 		name: "Girolamo La Sfrocchia",
 		description: [
 			"A portfolio for the Italian comedy author Girolamo La Sfrocchia.",
@@ -31,18 +43,18 @@ export const projects = [
 		webp: "/assets/projects/LaSfrocchia-md.webp",
 		jpg: "/assets/projects/LaSfrocchia-md.jpg",
 	},
-	{
-		name: "RRT Event Board",
-		description: [
-			"A CRUD Event Board built with React/Redux-Toolkit on Node JS and prototyped with Material UI. It features mail notifications via Snapgrid and a simple session based authentication.",
-		],
-		tools:
-			"Typescript, Javascript, React, Redux-Toolkit, Material-UI NodeJS, Express, Snapgrid API",
-		web: "https://investocracy.herokuapp.com/",
-		git: "https://github.com/telriot/investocracy",
-		webp: "/assets/projects/EventBoard-md.webp",
-		jpg: "/assets/projects/EventBoard-md.jpg",
-	},
+	// {
+	// 	name: "RRT Event Board",
+	// 	description: [
+	// 		"A CRUD Event Board built with React/Redux-Toolkit on Node JS and prototyped with Material UI. It features mail notifications via Snapgrid and a simple session based authentication.",
+	// 	],
+	// 	tools:
+	// 		"Typescript, Javascript, React, Redux-Toolkit, Material-UI NodeJS, Express, Snapgrid API",
+	// 	web: "https://investocracy.herokuapp.com/",
+	// 	git: "https://github.com/telriot/investocracy",
+	// 	webp: "/assets/projects/EventBoard-md.webp",
+	// 	jpg: "/assets/projects/EventBoard-md.jpg",
+	// },
 	{
 		name: "MTG EDH Life Counter",
 		description: [

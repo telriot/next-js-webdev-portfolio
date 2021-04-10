@@ -36,8 +36,10 @@ const frontEnd = {
 	stack: [
 		"React.Js",
 		"Next.Js",
+		"D3.js + React",
 		"Redux Toolkit",
 		"React Testing Library",
+		"Bootstrap",
 		"Styled Components",
 		"Material UI",
 		"Sass",
@@ -45,7 +47,7 @@ const frontEnd = {
 };
 const backEnd = {
 	title: "Back End",
-	stack: ["Node.Js", "Express", "Mongo DB", "Sanity", "Snipcart"],
+	stack: ["Node.Js", "Express", "Mongo DB", "Firebase / Firestore"],
 };
 const stack = [allRounders, frontEnd, backEnd];
 

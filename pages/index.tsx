@@ -24,23 +24,37 @@ export const getStaticProps: GetStaticProps = async () => {
             }
           } 
         }
-	  }`;
-
-	const githubData = await axios.post(
-		githubURL,
-		{
-			query,
-		},
-		{
-			headers: {
-				Authorization: `bearer ${process.env.GITHUB_KEY}`,
+	  }`
+	  let githubData, codewarsData
+	  try {
+		githubData = await axios.post(
+			githubURL,
+			{
+				query,
 			},
+			{
+				headers: {
+					Authorization: `bearer ${process.env.GITHUB_KEY}`,
+				},
+			}
+		);
+		codewarsData = await axios.get(codewarsURL, {
+			headers: { Authorization: `${process.env.CODEWARS_KEY}` },
+		});
+		
+	  } catch (error) {
+		console.log(error)
+	  }
+	  
+	  return (!codewarsData || !githubData)?
+	  {
+		props:{
+			codewarsRank: null,
+			contributions: null,
 		}
-	);
-	const codewarsData = await axios.get(codewarsURL, {
-		headers: { Authorization: `${process.env.CODEWARS_KEY}` },
-	});
-	return {
+	  } 
+	  :
+	  {
 		props: {
 			codewarsRank: codewarsData.data.ranks.overall.name,
 			contributions:
@@ -54,8 +68,8 @@ function Index({
 	contributions,
 	codewarsRank,
 }: {
-	contributions: number;
-	codewarsRank: string;
+	contributions: number | null;
+	codewarsRank: string | null;
 }) {
 	return (
 		<Layout>
@@ -75,11 +89,12 @@ function Index({
 					requires, as it sums up the best aspects of my passions in one
 					endless, rapidly changing&nbsp;discipline.
 				</Paragraph>
+				{(contributions && codewarsRank) && 
 				<Paragraph large noMargin>
 					In the last 30 days I have pushed {contributions} commits to my Github
 					repositories, and I am currently ranked at {codewarsRank}{" "}
 					on&nbsp;Codewars.
-				</Paragraph>
+				</Paragraph>}
 				<Paragraph large>
 					Please take a look around, and feel free to send me a message if you
 					want to get in touch for work, ideas, or anything code&nbsp;related.
