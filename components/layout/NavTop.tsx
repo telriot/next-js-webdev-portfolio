@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Hamburger from "@components/shared/Hamburger";
 import { useLayoutDispatch, useLayoutState } from "contexts/LayoutContext";
 import Link from "next/link";
+
 const Container = styled.div`
 	padding: 0 3vw;
 	${({ theme }) => theme.breakpoints.up("md")} {

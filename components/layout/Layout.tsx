@@ -4,9 +4,8 @@ import Footer from "@components/layout/Footer";
 import NavTop from "@components/layout/NavTop";
 import MobileMenu from "@components/layout/MobileMenu";
 import { useLayoutState } from "contexts/LayoutContext";
-import Head from "next/head";
 import { HTMLAttributes } from "react";
-
+import Head from 'next/head'
 interface ILayoutProps extends HTMLAttributes<HTMLDivElement> {}
 
 const Grid = styled.div`
@@ -26,14 +25,9 @@ function Layout({ children }: ILayoutProps) {
 	return (
 		<>
 			<Head>
-				<meta
-					name="description"
-					content="Beniamino Tartarini, freelance web developer from Italy working on Typescript and the MERN stack. "
-				/>
-			</Head>
-			<Grid>
+				<title>Beniamino Tartarini</title>
+			</Head>			<Grid>
 				<NavTop />
-
 				<Sidebar />
 				{children}
 				<Footer />

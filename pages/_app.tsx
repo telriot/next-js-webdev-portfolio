@@ -1,12 +1,12 @@
-import React from "react";
-import { AppProps } from "next/app";
-import { createGlobalStyle, ThemeProvider } from "styled-components";
-import Head from "next/head";
-import fontTheme from "@styles/font.ts";
-import theme from "@styles/theme";
-import "sal.js/dist/sal.css";
-import sal from "sal.js";
-import { LayoutProvider } from "contexts/LayoutContext";
+import React from 'react';
+import { AppProps } from 'next/app';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import Head from 'next/head';
+import fontTheme from '@styles/font';
+import theme from '@styles/theme';
+import 'sal.js/dist/sal.css';
+import sal from 'sal.js';
+import { LayoutProvider } from 'contexts/LayoutContext';
 
 const GlobalStyle = createGlobalStyle`
 
@@ -57,17 +57,17 @@ function MyApp({ Component, pageProps }: AppProps) {
 	});
 	return (
 		<>
+			<Head>
+				<meta name='viewport' content='width=device-width, initial-scale=1' />
+			</Head>
 			<style jsx global>
 				{fontTheme}
 			</style>
-			<Head>
-				<title>Beniamino Tartarini</title>
-			</Head>
 			<GlobalStyle />
 			<LayoutProvider>
 				<ThemeProvider theme={theme}>
-					{" "}
-					<Component {...pageProps} />{" "}
+					{' '}
+					<Component {...pageProps} />{' '}
 				</ThemeProvider>
 			</LayoutProvider>
 		</>

@@ -18,6 +18,7 @@ function Projects() {
 				<SubWithMargin role="doc-subtitle">
 					Some of my recent personal projects (more on&nbsp;Github!)
 				</SubWithMargin>
+				{/* <Paragraph small>! Projects hosted on Heroku will take a few seconds to load on cold start ! </Paragraph> */}
 				{projects.map((project) => (
 					<ProjectCard key={project.name} project={project} />
 				))}

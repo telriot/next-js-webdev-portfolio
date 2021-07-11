@@ -43,7 +43,7 @@ export const getStaticProps: GetStaticProps = async () => {
 		});
 		
 	  } catch (error) {
-		console.log(error)
+		console.error(error)
 	  }
 	  
 	  return (!codewarsData || !githubData)?

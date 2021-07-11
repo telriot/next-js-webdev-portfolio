@@ -6,4 +6,5 @@ export type TProject = {
 	git?: string;
 	webp: string;
 	jpg: string;
+	coldStart: boolean;
 };
