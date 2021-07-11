@@ -3,7 +3,7 @@ import Hamburger from "@components/shared/Hamburger";
 import { useLayoutDispatch, useLayoutState } from "contexts/LayoutContext";
 import Link from "next/link";
 
-const Container = styled.div`
+const Container = styled.header`
 	padding: 0 3vw;
 	${({ theme }) => theme.breakpoints.up("md")} {
 		display: none;

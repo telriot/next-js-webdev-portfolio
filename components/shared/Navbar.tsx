@@ -9,7 +9,7 @@ interface INavbar {
 interface INavItem extends HTMLAttributes<HTMLDivElement> {
 	color?: "primary" | "secondary" | undefined;
 }
-const Container = styled.div`
+const Container = styled.nav`
 	display: flex;
 	flex-direction: column;
 `;

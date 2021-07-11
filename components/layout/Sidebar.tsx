@@ -4,7 +4,7 @@ import Navbar from "@components/shared/Navbar";
 import Social from "@components/shared/Social";
 import Copyright from "@components/shared/Copyright";
 
-const Wrapper = styled.div`
+const Wrapper = styled.aside`
 	position: fixed;
 	width: ${({ theme }) =>
 		"calc((100vw - " + theme.container.padding + "*2)/4)"};

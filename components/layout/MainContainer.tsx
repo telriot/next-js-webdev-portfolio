@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const MainContainer = styled.div`
+export const MainContainer = styled.main`
 	grid-column: main-start/main-end;
 	//background: rgba(0, 0, 0, 0.1);
 	display: flex;

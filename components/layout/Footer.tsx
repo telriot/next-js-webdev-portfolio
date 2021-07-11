@@ -5,7 +5,7 @@ import Copyright from "@components/shared/Copyright";
 import TextLink from "@components/shared/TextLink";
 import { useRouter } from "next/router";
 import { footerLinks } from "@public/config";
-const Wrapper = styled.div`
+const Wrapper = styled.footer`
 	background: ${({ theme }) => theme.palette.primary};
 	height: max-content;
 	padding: 0.5em 3vw;

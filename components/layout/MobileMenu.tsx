@@ -15,7 +15,7 @@ interface IMenuProps extends HTMLAttributes<HTMLDivElement> {
 	isRendered: boolean;
 }
 
-const Overlay = styled.div<IMenuProps>`
+const Overlay = styled.nav<IMenuProps>`
 	position: fixed;
 	top: 0;
 	left: 0;
