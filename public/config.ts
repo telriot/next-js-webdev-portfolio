@@ -46,6 +46,18 @@ export const projects : TProject[] = [
 		coldStart: false
 	},
 	{
+		name: "BTWeb",
+		description: [
+			"A statically served localized landing page for an international development agency in Japan.",
+		],
+		tools: "Typescript, NEXT.js, Styled Components",
+		web: "https://btweb.vercel.app/",
+		git: "https://github.com/telriot/btweb",
+		webp: "/assets/projects/btweb.webp",
+		jpg: "/assets/projects/btweb.jpg",
+		coldStart: false
+	},
+	{
 		name: "Girolamo La Sfrocchia",
 		description: [
 			"A portfolio for the Italian comedy author Girolamo La Sfrocchia.",
